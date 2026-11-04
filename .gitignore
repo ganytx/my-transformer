@@ -1,0 +1,59 @@
+# Private learning notes and local scratch commands
+/PROGRESS.md
+/目标.md
+/t.txt
+
+# Teacher references, local dependencies, caches, and training artifacts
+/.private/
+/runs/
+/.openfilm-cache/
+/.video-tools/
+**/.film/
+
+# Recordings and audio: review separately before publishing
+/video/
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.wav
+*.mp3
+*.m4a
+
+# Downloaded/prepared corpora: publish scripts and documentation instead
+/data/**
+!/data/**/
+!/data/**/README.md
+!/data/**/manifest.json
+!/data/**/download_manifest.json
+
+# Python environments and generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+node_modules/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+/.vscode/
+/.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini

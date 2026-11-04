@@ -1,0 +1,38 @@
+{
+  "source": "HuggingFaceTB/smol-smoltalk",
+  "revision": "f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc",
+  "seed": 42,
+  "eligible_unique_questions": 2129,
+  "exclusions": {
+    "empty_multiline_or_non_ascii": 335509,
+    "too_long": 12486,
+    "text_transformation_or_code": 154
+  },
+  "splits": {
+    "train": {
+      "pairs": 2000,
+      "characters": 432231,
+      "sources": {
+        "everyday-conversations": 1220,
+        "openhermes-50k": 459,
+        "smol-magpie-ultra-short": 321
+      },
+      "max_answer_characters": 160,
+      "max_formatted_characters": 486,
+      "sha256": "8351c3d74a2e84181b6c7adfe186c3d364fdee0c6b7b7b58eac2194235672ed5"
+    },
+    "validation": {
+      "pairs": 100,
+      "characters": 21549,
+      "sources": {
+        "openhermes-50k": 16,
+        "everyday-conversations": 65,
+        "smol-magpie-ultra-short": 19
+      },
+      "max_answer_characters": 159,
+      "max_formatted_characters": 434,
+      "sha256": "b068368c5489a1db038ec2c6be80dbd653d42f1d7ec76e9e9ee21f6ba29e14a2"
+    }
+  },
+  "protocol": "First user/assistant pair or first substantive pair after greeting-only exchange; no substantive history removed. ASCII single-line, answer<=160 characters, question<=320, formatted pair<=512. Exclude common rewriting/summarization/code tasks. Prefer everyday conversations, then short magpie, openhermes and self-oss. Unique normalized questions, disjoint train/validation; reference replies kept without truncation, punctuation normalized. Context dependence filter is heuristic, not a semantic guarantee."
+}

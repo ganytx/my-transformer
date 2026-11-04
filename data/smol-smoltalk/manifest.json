@@ -1,0 +1,109 @@
+{
+  "repo": "HuggingFaceTB/smol-smoltalk",
+  "revision": "f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc",
+  "license": "Apache-2.0",
+  "preparation": "full is a lossless messages/source export. short_512 keeps only complete opening user/assistant pairs, with no initial system message, no internal newlines, printable ASCII after punctuation normalization, <=512 formatted characters. No answer truncation. Whitespace/case-normalized opening deduplication across splits; 5% hash buckets of original train become validation, original test stays test. Heldout characters must be covered by train.",
+  "original": {
+    "train": {
+      "original_conversations": 460341,
+      "excluded_from_short": {
+        "multiline": 368803,
+        "longer_than_512": 12531,
+        "initial_roles_or_system_message": 70484,
+        "duplicate_opening": 2417,
+        "non_ascii_or_control": 551
+      },
+      "sources": {
+        "smol-magpie-ultra-short": 270838,
+        "smol-contraints": 34433,
+        "self-oss-instruct": 48071,
+        "smollm-rewrite-30k": 26657,
+        "openhermes-50k": 47492,
+        "smol-summarize-20k": 19272,
+        "longalign": 3560,
+        "explore-instruct-rewrite": 3017,
+        "smol-summarize-5k": 4749,
+        "everyday-conversations": 2252
+      }
+    },
+    "test": {
+      "original_conversations": 24229,
+      "excluded_from_short": {
+        "initial_roles_or_system_message": 3714,
+        "multiline": 19431,
+        "duplicate_opening": 143,
+        "longer_than_512": 631,
+        "non_ascii_or_control": 18
+      },
+      "sources": {
+        "smol-summarize-20k": 1013,
+        "smol-magpie-ultra-short": 14162,
+        "everyday-conversations": 127,
+        "self-oss-instruct": 2590,
+        "smol-contraints": 1803,
+        "openhermes-50k": 2508,
+        "smollm-rewrite-30k": 1418,
+        "smol-summarize-5k": 251,
+        "longalign": 174,
+        "explore-instruct-rewrite": 183
+      }
+    }
+  },
+  "full": {
+    "train": {
+      "rows": 460341,
+      "bytes": 1877149528,
+      "sha256": "1c5807a0d726fbdcf52759b1c6b19e88035d32cd113b5e219280ab4308e23cff"
+    },
+    "test": {
+      "rows": 24229,
+      "bytes": 98134040,
+      "sha256": "10e01778eb94e56ba31bd267142028622e5f827bb0521fad8a2b86ce493df8e4"
+    }
+  },
+  "short_512": {
+    "train": {
+      "pairs": 5298,
+      "characters": 1927144,
+      "bytes": 1927144,
+      "max_formatted_characters": 512,
+      "unknown_character_exclusions": 0,
+      "text_sha256": "f7edf9b81223933840f66d07d7718c99a594e8e763f01fac548272ba6b7fb139",
+      "sources": {
+        "smol-contraints": 913,
+        "everyday-conversations": 5,
+        "smol-magpie-ultra-short": 3150,
+        "openhermes-50k": 1229,
+        "explore-instruct-rewrite": 1
+      }
+    },
+    "validation": {
+      "pairs": 257,
+      "characters": 93985,
+      "bytes": 93985,
+      "max_formatted_characters": 512,
+      "unknown_character_exclusions": 0,
+      "text_sha256": "7352d7411aaa811ffed97a130b1105de9e7d9f93d2914726e4fc6174d7e9cb62",
+      "sources": {
+        "smol-magpie-ultra-short": 158,
+        "openhermes-50k": 57,
+        "smol-contraints": 42
+      }
+    },
+    "test": {
+      "pairs": 292,
+      "characters": 103994,
+      "bytes": 103994,
+      "max_formatted_characters": 512,
+      "unknown_character_exclusions": 0,
+      "text_sha256": "b4ba33ec6315f0a4ea8a9fff669edfa65701b417620caac96f0bd46a0f9b6361",
+      "sources": {
+        "smol-contraints": 48,
+        "openhermes-50k": 75,
+        "smol-magpie-ultra-short": 169
+      }
+    }
+  },
+  "short_vocab_size": 96,
+  "pyarrow_version": "26.0.1"
+}

@@ -1,0 +1,51 @@
+{
+  "seed": 42,
+  "source": "../full/train.jsonl",
+  "source_revision": "f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc",
+  "eligible_unique_conversations": 378907,
+  "excluded": {
+    "non_ascii_or_control": 64436,
+    "duplicate_opening": 16740,
+    "roles": 258
+  },
+  "vocab_size": 97,
+  "splits": {
+    "train": {
+      "conversations": 20000,
+      "messages": 89643,
+      "characters": 73518129,
+      "max_conversation_characters": 63937,
+      "sources": {
+        "smol-summarize-20k": 943,
+        "smol-magpie-ultra-short": 11224,
+        "explore-instruct-rewrite": 171,
+        "openhermes-50k": 2144,
+        "self-oss-instruct": 2546,
+        "smol-contraints": 1767,
+        "smollm-rewrite-30k": 943,
+        "smol-summarize-5k": 185,
+        "longalign": 77
+      },
+      "text_sha256": "4011456f23b127a37f5bdd717c4fa757b5f426c4791b77899fd289eeb0500b04"
+    },
+    "validation": {
+      "conversations": 1000,
+      "messages": 4560,
+      "characters": 3765716,
+      "max_conversation_characters": 33937,
+      "sources": {
+        "smol-magpie-ultra-short": 578,
+        "self-oss-instruct": 138,
+        "smollm-rewrite-30k": 39,
+        "openhermes-50k": 99,
+        "smol-contraints": 74,
+        "smol-summarize-20k": 49,
+        "smol-summarize-5k": 10,
+        "longalign": 4,
+        "explore-instruct-rewrite": 9
+      },
+      "text_sha256": "ba5bb04f1f39d20d6d6fb2928116e2be232b3a6c5e2b0a3cea41b0d773905297"
+    }
+  },
+  "protocol": "Uniform reservoir sample of 21000 eligible unique openings, shuffled and split 20000/1000. Complete system/user/assistant messages retained; punctuation normalized; printable ASCII plus newline/tab; no length restriction or answer truncation. Official test untouched."
+}
